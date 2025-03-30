@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        MaxHeight="1000"
+        MaxWidth="800"
+        MinHeight="1000"
+        MinWidth="800"
+        Background="#B9B28A"
+        x:Class="Planer.MainWindow"
+        Title="Planer_Dnia">
+        <StackPanel Width="800" 
+                    Height="400" 
+                    Background="#B9B28A" 
+                    x:Name="Panel_TaskAdder" >
+                <TextBlock 
+                        Background="#504B38"
+                        VerticalAlignment="Top"
+                        Text="Planer Dnia"
+                        TextAlignment="Center"
+                        FontSize="30"
+                        FontWeight="Bold"
+                        Width="800"
+                        Height="50"/>
+                <StackPanel Background="#F8F3D9" 
+                            Width="300"
+                            Margin="10">
+                <TextBlock Text="Wpisz nazwe Zadania"
+                           TextAlignment="Center"
+                           Padding="5"
+                           FontSize="15"
+                           FontWeight="Medium"
+                           Foreground="DarkGray"/>
+                <TextBox
+                        x:Name="TextBox_TaskName"
+                        Width="80"
+                         Padding="10,5" 
+                         Margin="5"
+                         Background="#BDB395"
+                         Text="Wybierz"/>
+                <TextBlock
+                           Text="Wybierz Kategorie"
+                           TextAlignment="Center"
+                           Padding="5"
+                           FontSize="15"
+                           FontWeight="Medium"
+                           Foreground="DarkGray"/>
+                
+                <ComboBox x:Name="ComboBox_Category"
+                          SelectedIndex="0" 
+                          HorizontalAlignment="Center"
+                          Margin="5"
+                          Background="#BDB395">
+                        <ComboBoxItem Content="--Wybierz--"/>
+                        <ComboBoxItem Content="Praca"/>
+                        <ComboBoxItem Content="Relaks"/>
+                        <ComboBoxItem Content="Zakupy"/>
+                </ComboBox>
+                <Button Content="Dodaj Zadanie" 
+                        HorizontalAlignment="Center"
+                        Margin="5"
+                        Background="#504B38"
+                        Click="SubmitInfoButton_Click"/>
+                </StackPanel>
+                <WrapPanel x:Name="Panel_TaskGrid">
+                </WrapPanel>
+        </StackPanel>
+</Window>
+
